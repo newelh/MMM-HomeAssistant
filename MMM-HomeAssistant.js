@@ -69,29 +69,29 @@ Module.register("MMM-HomeAssistant", {
       }
     }
 
-    for (let equip of this.equipData) {
-      if (equip.entity_id.startsWith("switch.")) {
-        console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
-        var group = this.makeSwitchGroup(equip.entity_id, equip.attributes.friendly_name, equip.state);
-        wrapper.appendChild(group);
-      }
-    }
+    // for (let equip of this.equipData) {
+    //   if (equip.entity_id.startsWith("switch.")) {
+    //     console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
+    //     var group = this.makeSwitchGroup(equip.entity_id, equip.attributes.friendly_name, equip.state);
+    //     wrapper.appendChild(group);
+    //   }
+    // }
 
-    for (let equip of this.equipData) {
-      if (equip.entity_id.startsWith("binary_sensor.")) {
-        console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
-        var group = this.makeBinarySensorGroup(equip);
-        wrapper.appendChild(group);
-      }
-    }
+    // for (let equip of this.equipData) {
+    //   if (equip.entity_id.startsWith("binary_sensor.")) {
+    //     console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
+    //     var group = this.makeBinarySensorGroup(equip);
+    //     wrapper.appendChild(group);
+    //   }
+    // }
 
-    for (let equip of this.equipData) {
-      if (equip.entity_id.startsWith("sensor.")) {
-        console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
-        var group = this.makeSensorGroup(equip);
-        wrapper.appendChild(group);
-      }
-    }
+    // for (let equip of this.equipData) {
+    //   if (equip.entity_id.startsWith("sensor.")) {
+    //     console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
+    //     var group = this.makeSensorGroup(equip);
+    //     wrapper.appendChild(group);
+    //   }
+    // }
 
     return wrapper;
   },
