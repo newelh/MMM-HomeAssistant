@@ -10,12 +10,6 @@ Module.register("MMM-HomeAssistant", {
     return ["MMM-HomeAssistant.css"];
   },
 
-	getTranslations: function() {
-    return {
-      'zh': 'translations/zh.json'
-    };
-	},
-
   start: function() {
     console.log("Starting module: " + this.name);
 
@@ -30,8 +24,8 @@ Module.register("MMM-HomeAssistant", {
 
   getStates: function() {
     this.sendSocketNotification('HA_GET_STATES', {
-      baseUrl: this.url,
-      accessToken: this.config.accessToken,
+        baseUrl: this.url,
+        accessToken: this.config.accessToken,
       });
   },
 
@@ -59,7 +53,7 @@ Module.register("MMM-HomeAssistant", {
     }
     if (!this.loaded) {
       var loading = document.createElement("div");
-      loading.innerHTML = "Hello, HomeAssistant is loading...";
+      loading.innerHTML = "Loading Home Assistant...";
       loading.className = "normal regular medium";
       return loading;
     }
@@ -134,10 +128,10 @@ Module.register("MMM-HomeAssistant", {
     var state = "";
     switch (equip.attributes.device_class) {
       case "opening":
-        state = this.translate(equip.state);
+        state = equip.state;
         break;
       case "motion":
-        state = this.translate("someone moving");
+        state = "someone moving";
         break;
       default:
         break;
