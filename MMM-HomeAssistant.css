@@ -1,13 +1,14 @@
 .wrapper {
-    margin-bottom: 10px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    overflow-x: scoll;
+    overflow-x: scroll;
 }
 
 .group {
     flex-grow: 1;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .text{
