@@ -1,24 +1,23 @@
 .wrapper {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
     overflow-x: scroll;
 }
 
 .group {
     flex-grow: 1;
+    min-width: 20vw;
+    text-align: center;
 }
 
 .text{
     font-size: .5em;
-    margin-top: 3px;
-    flex-grow: 1;
 }
 
 .slider {
     -webkit-appearance: slider-vertical; /* WebKit */
     width: 1em;
     height: 25vh;
-    flex-grow: 1;
 }
 
