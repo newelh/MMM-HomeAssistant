@@ -64,8 +64,9 @@ Module.register("MMM-HomeAssistant", {
     for (let equip of this.equipData) {
       if (equip.entity_id.startsWith("light.")) {
         console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
+        console.log(equip.attributes)
 
-        var state = equip.state
+        var state = 0
 
         if ("brightness" in equip.attributes) {
           state = equip.attributes.brightness
@@ -104,15 +105,7 @@ Module.register("MMM-HomeAssistant", {
     input.setAttribute("min", "0")
     input.setAttribute("max", "255")
 
-    if (state === "on") {
-      input.value = 255;
-    }
-    else if (state === "off") {
-      input.value = 0;
-    }
-    else {
-      input.value = state;
-    }
+    input.value = state;
 
     input.addEventListener('input', function() {
       self.postState(entityId, type, input.value);
