@@ -19,7 +19,6 @@
     height: 55px;
     font-size: 25px;
     margin-top: 3px;
-    font-family: "Microsoft Yahei";
 }
 
 .switch{
@@ -31,14 +30,10 @@
     position: relative;
 }
 
-.slider{
-    background: #ccc;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: all .4s;
-    cursor: pointer;
+.slider {
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
 }
 

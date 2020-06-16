@@ -91,14 +91,6 @@ Module.register("MMM-HomeAssistant", {
     var group = document.createElement("div");
     group.className = "group"
 
-    var text = document.createElement("div");
-    text.className = "text";
-    text.innerText = name;
-    group.appendChild(text);
-
-    var button = document.createElement("label");
-    button.className = "switch";
-
     var input = document.createElement("input");
     input.id = "cb";
     input.setAttribute("type", "range");
@@ -111,15 +103,20 @@ Module.register("MMM-HomeAssistant", {
     }
 
     input.addEventListener('input', function() {
-      console.log(self.name + "onclick");
       self.postState(entityId, type, input.value);
     });
-    
-    button.appendChild(input);
 
-    var round = document.createElement("div");
-    round.className = "slider";
-    button.appendChild(round);
+    input.className = "slider"
+
+    group.appendChild(input);
+
+    var text = document.createElement("div");
+    text.className = "text";
+    text.innerText = name;
+    group.appendChild(text);
+
+    var button = document.createElement("label");
+    button.className = "switch";
 
     group.appendChild(button);
 
