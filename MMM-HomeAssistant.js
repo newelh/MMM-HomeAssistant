@@ -94,9 +94,11 @@ Module.register("MMM-HomeAssistant", {
     var input = document.createElement("input");
     input.id = "cb";
     input.setAttribute("type", "range");
+    input.setAttribute("min", "0")
+    input.setAttribute("max", "255")
 
     if (state == "on") {
-      input.value = 100;
+      input.value = 255;
     }
     else {
       input.value = 0;

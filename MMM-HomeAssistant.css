@@ -4,17 +4,13 @@
 
 .group{
     float: left;
-    width: 240px;
-    height: 55px;
-    border:2px solid #aaa;
-    border-radius: 12px;
+    height: 200px;
     margin-left: 44px;
     margin-top: 10px;
     vertical-align: center;
 }
 
 .text{
-    float: left;
     width: 170px;
     height: 55px;
     font-size: 25px;

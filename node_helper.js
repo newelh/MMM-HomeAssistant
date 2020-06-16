@@ -39,7 +39,7 @@ module.exports = NodeHelper.create({
 
   postState: function(payload) {
     var url = payload.baseUrl + "/api/services/" + payload.equipType + "/toggle";
-    var requestData = { "entity_id": payload.entityId, "brightness_pct": payload.state };
+    var requestData = { "entity_id": payload.entityId, "brightness": payload.state };
 
     request({
       url: url,
