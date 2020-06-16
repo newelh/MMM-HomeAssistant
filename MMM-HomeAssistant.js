@@ -89,7 +89,6 @@ Module.register("MMM-HomeAssistant", {
   makeLightSwitchGroup: function(entityId, name, state, type) {
     var self = this;
     var group = document.createElement("div");
-    group.className = "group"
 
     var input = document.createElement("input");
     input.id = "cb";
@@ -116,11 +115,6 @@ Module.register("MMM-HomeAssistant", {
     text.className = "text";
     text.innerText = name;
     group.appendChild(text);
-
-    var button = document.createElement("label");
-    button.className = "switch";
-
-    group.appendChild(button);
 
     return group;
   },
