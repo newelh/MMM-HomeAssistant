@@ -64,7 +64,14 @@ Module.register("MMM-HomeAssistant", {
     for (let equip of this.equipData) {
       if (equip.entity_id.startsWith("light.")) {
         console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
-        var group = this.makeLightGroup(equip.entity_id, equip.attributes.friendly_name, equip.state);
+
+        var state = equip.state
+
+        if ("brightness" in equip.attributes) {
+          state = equip.attributes.brightness
+        }
+
+        var group = this.makeLightGroup(equip.entity_id, equip.attributes.friendly_name, state);
         wrapper.appendChild(group);
       }
     }
@@ -97,11 +104,14 @@ Module.register("MMM-HomeAssistant", {
     input.setAttribute("min", "0")
     input.setAttribute("max", "255")
 
-    if (state == "on") {
+    if (state === "on") {
       input.value = 255;
     }
-    else {
+    else if (state === "off") {
       input.value = 0;
+    }
+    else {
+      input.value = state;
     }
 
     input.addEventListener('input', function() {
