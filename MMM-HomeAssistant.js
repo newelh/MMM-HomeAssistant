@@ -107,7 +107,7 @@ Module.register("MMM-HomeAssistant", {
 
     input.value = state;
 
-    input.addEventListener('input', function() {
+    input.addEventListener('change', function() {
       self.postState(entityId, type, input.value);
     });
 
