@@ -66,7 +66,7 @@ Module.register("MMM-HomeAssistant", {
         console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
         console.log(equip.attributes)
 
-        var state = 0
+        var state = 255
 
         if ("brightness" in equip.attributes) {
           state = equip.attributes.brightness
