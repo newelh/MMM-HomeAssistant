@@ -6,9 +6,8 @@
 }
 
 .group {
-    flex-grow: 1;
-    padding-left: 2em;
-    padding-right: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .text{
