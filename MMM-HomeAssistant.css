@@ -1,6 +1,7 @@
 .wrapper {
     margin-bottom: 20px;
 }
+
 .group{
     float: left;
     width: 240px;
@@ -11,6 +12,7 @@
     margin-top: 10px;
     vertical-align: center;
 }
+
 .text{
     float: left;
     width: 170px;
@@ -19,25 +21,7 @@
     margin-top: 3px;
     font-family: "Microsoft Yahei";
 }
-.sensor_state_text{
-    float: right;
-    margin-top: 2px;
-    width: 70px;
-    height: 15px;
-    position: relative;
-    display: inline-block;
-    font-size: 17px;
-}
-.binary_sensor_state_text{
-    float: right;
-    margin-top: 6px;
-    width: 70px;
-    height: 15px;
-    position: relative;
-    display: inline-block;
-    font-size: 14px;
-    line-height: normal;
-}
+
 .switch{
     float: right;
     margin-top: 19px;
@@ -45,14 +29,8 @@
     width: 35px;
     height: 15px;
     position: relative;
-    display: inline-block;
 }
-input{
-    display:none ;
-}
-.round{
-    border-radius: 10px;
-}
+
 .slider{
     background: #ccc;
     position: absolute;
@@ -63,22 +41,4 @@ input{
     transition: all .4s;
     cursor: pointer;
 }
-.slider:after{
-    content: '';
-    width: 17px;
-    height: 17px;
-    display: block;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    transition: all .4s;
-}
 
-input:checked+.slider{
-    background: #2196F3;
-}
-input:checked+.slider:after{
-    transform: translateX(23px);
-}
