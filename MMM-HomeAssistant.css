@@ -6,18 +6,19 @@
 }
 
 .group {
-    margin-left: 3em;
-    margin-right: 3em;
+    flex-grow: 1;
 }
 
 .text{
     font-size: .5em;
     margin-top: 3px;
+    flex-grow: 1;
 }
 
 .slider {
     -webkit-appearance: slider-vertical; /* WebKit */
     width: 1em;
     height: 25vh;
+    flex-grow: 1;
 }
 
