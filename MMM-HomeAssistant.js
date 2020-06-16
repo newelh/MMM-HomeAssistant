@@ -66,7 +66,7 @@ Module.register("MMM-HomeAssistant", {
         console.log(this.name + " get equipment:" + equip.attributes.friendly_name + ", id: ", equip.entity_id);
         console.log(equip.attributes)
 
-        var state = 255
+        var state = null
 
         if ("brightness" in equip.attributes) {
           state = equip.attributes.brightness
@@ -105,7 +105,9 @@ Module.register("MMM-HomeAssistant", {
     input.setAttribute("min", "0")
     input.setAttribute("max", "255")
 
-    input.value = state;
+    if (state) {
+      input.value = state;
+    }
 
     input.addEventListener('change', function() {
       self.postState(entityId, type, input.value);
